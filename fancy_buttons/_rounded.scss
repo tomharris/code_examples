@@ -1,0 +1,5 @@
+@mixin rounded($radius: 5px) {border-radius:$radius;-moz-border-radius:$radius;}
+@mixin rounded-top($radius: 5px) {border-radius:$radius $radius 0 0;-moz-border-radius-top:$radius $radius 0 0;}
+@mixin rounded-bottom($radius: 5px) {border-radius:0 0 $radius $radius;-moz-border-radius-top:0 0 $radius $radius;}
+@mixin rounded-left($radius: 5px) {border-radius:$radius 0 0 $radius;-moz-border-radius-top:$radius 0 0 $radius;}
+@mixin rounded-right($radius: 5px) {border-radius:0 $radius $radius 0;-moz-border-radius-top:0 $radius $radius 0;}

@@ -1,0 +1,29 @@
+@import "fancy_button";
+@import "rounded";
+
+.button_group {
+  a, button {
+    &.fancy_button, .fancy_blue_button {
+      @include rounded(0);
+
+      &:first-child {
+        @include rounded-left(3px);
+      }
+
+      &:last-child {
+        @include rounded-right(3px);
+        border-left:0;
+      }
+    }
+  }
+}
+
+a, button {
+  &.fancy_button {
+    @include fancy-button(#f5f5f7, #e8e8ea, #cccccc, #e4e4e4, #c5c5c5);
+  }
+}
+
+a.wider {
+  padding:4px 15px;
+}

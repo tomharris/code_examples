@@ -1,0 +1,45 @@
+@import "gradient";
+@import "rounded";
+
+@mixin fancy-button($top_color: white, $bottom_color: black, $border_color: black, $hover_color: white, $hover_border: black, $text_color:#333333) {
+  @include gradient($top_color, $bottom_color);
+  @include rounded(3px);
+  border:solid 1px $border_color;
+  color:$text_color;
+  display:inline-block;
+  font-size:12px;
+  line-height:18px;
+  padding:4px 7px;
+  text-decoration:none;
+  box-shadow:1px 1px 0 #f7f7f7;
+  cursor:pointer;
+
+  &:hover {
+    @include gradient-disabled;
+    background:$hover_color;
+    border-color:$hover_border;
+  }
+
+  img {
+    vertical-align:middle;
+    width:16px;
+    height:16px;
+  }
+
+  span + img, img + span {
+    margin-left:5px;
+  }
+
+  &.disabled {
+    background:lighten($hover_color, 5%);
+
+    &:hover {
+      background:lighten($hover_color, 5%);
+    }
+
+    img, span {
+      filter:alpha(opacity=50); // IE<=9
+      opacity:0.5; // Real browsers
+    }
+  }
+}
