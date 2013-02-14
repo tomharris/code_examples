@@ -16,10 +16,6 @@ class AttachedDocumentSerializer < ActiveModel::Serializer
   end
 
   def document_url
-    if MyApp::Application.config.custom.paperclip_image_config[:storage] == :s3
-      attached_document.document.expiring_url(1.hour)
-    else
-      attached_document.document.url
-    end
+    attached_document.document.expiring_url(1.hour)
   end
 end
