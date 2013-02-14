@@ -10,11 +10,11 @@ describe "#documents" do
       :user => @user,
       :category => 'resume',
       :name => 'test',
-      :document_file_name => "resume.pdf",
-      :document_content_type => "application/pdf",
+      :document_file_name => "resume.doc",
+      :document_content_type => "application/msword",
       :document_file_size => 300_000,
-      :shadowed_pdf_document_file_name => "resume.pdf_rendered.jpg",
-      :shadowed_pdf_document_content_type => "image/jpeg",
+      :shadowed_pdf_document_file_name => "resume.pdf",
+      :shadowed_pdf_document_content_type => "application/pdf",
       :shadowed_pdf_document_file_size => 300_000
     )
   end
